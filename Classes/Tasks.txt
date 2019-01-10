@@ -1,46 +1,12 @@
-Review https://www.w3schools.com/tags/
-<!DOCTYPE>
-<a>
-<article>
-<audio>
-<b>
-<base>
-<blockquote>
-<body>
-<br>
-<button>
-<div>
-<em>
-<fieldset>
-<footer>
-<form>
-<h1> to <h6>
-<head>
-<header>
-<hr>
-<html>
-<i>
-<iframe>
-<img>
-<input>
-<label>
-<li>
-<meta>
-<nav>
-<ol>
-<option>
-<p>
-<script>
-<select>
-<span>
-<strong>
-<style>
-<table>
-<tbody>
-<td>
-<textarea>
-<th>
-<tr>
-<u>
-<ul>
-<video>
+Space in div with class (item)
+مسافة مابين الdiv
+image width same size
+تثبيت عرض الصور
+image height same size
+تثبيت إرتفاع الصور
+text align left
+الكلام على الشمال
+
+col2 div
+col4 div
+col1 div
