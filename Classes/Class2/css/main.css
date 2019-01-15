@@ -1,3 +1,24 @@
+ @font-face {
+    font-family: 'Droid Arabic Kufi';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.eot);
+    src: url(https://fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.eot?#iefix) format('embedded-opentype'),
+         url(https://fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.woff2) format('woff2'),
+         url(https://fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.woff) format('woff'),
+         url(https://fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Droid Arabic Kufi';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.eot);
+    src: url(https://fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.eot?#iefix) format('embedded-opentype'),
+         url(https://fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.woff2) format('woff2'),
+         url(https://fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.woff) format('woff'),
+         url(https://fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.ttf) format('truetype');
+  }
+
 body{
     margin: 0px;
 }
@@ -24,6 +45,11 @@ body{
     padding: 12px;
     margin: 6px;
     font-size: 18px;
+}
+.menu ul li:hover{
+    background: #646d7c;
+    background: rgba(12, 11, 255,0.8);
+    
 }
 
 .content{
@@ -54,3 +80,65 @@ body{
 .item{
     background: whitesmoke;
 }
+
+.font-test{
+    font-family: 'Droid Arabic Kufi', serif;
+}
+
+table{
+    width: 100%;
+    direction: rtl;
+}
+td,th{
+    border: #383e4c 1px solid;
+}
+table {
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  form{
+      display: block;
+      width: 80%;
+      margin: auto;      
+      padding: 30px;
+      clear: both;
+  }
+  form div label{
+    width: 20%;    
+}
+  input,textarea{      
+      border: 1px solid #89898b;
+      width: 100%;
+      font-size: 16px;
+      padding: 10px 0px 10px 10px;      
+      margin: 5px 0px;
+      margin-left: -5px;
+  }
+  form div input{
+    width: 80%;
+}
+  button{
+    color: white;    
+    padding: 10px 20px;
+    font-size: 18px;    
+    border: solid 1px white;  
+  }
+  button[type=submit]{
+    background: green;
+  }
+  button[type=button]{
+    background: yellow;
+  }
+  button[type=reset]{
+    background: red;    
+  }
+
+  #js-test{
+      height: 100px;
+      background: #646d7c;
+      color: aliceblue;
+  }

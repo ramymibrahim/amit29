@@ -52,18 +52,22 @@
         </div>
 
         <form action="send.html" method="GET">
-            <input type="text" placeholder="Name..." name="name" required="required" />
+            <div>
+                    <label>Name:</label>
+                    <input type="text" placeholder="Name..." name="name" required="required" />
+            </div>
+            
             <input type="email" placeholder="Email..." name="email" />
             <input type="text" placeholder="Subject..." name="subject" required />
             <textarea placeholder="Message..." name="message"></textarea>
-            <button type="submit">Send</button>
+            <button type="submit" onclick="changeDiv();">Send</button>
             <button type="reset">Reset</button>
-            <button type="button" onclick="alert('Hi')">Normal Button</button>
+            <button class="sbtn" type="button" onclick="alert('Hi')">Normal Button</button>
         </form>
         <!--
     End Form
 -->
-
+<!-- 
 
         <a href="https://www.google.com" target="_blank" title="Google.com">
             <img src="img/1-1.jpg" />
@@ -84,6 +88,31 @@
         <button>Button 1</button><br />
         <button>Button 2</button>
     </div>
+
+    <h1>هذا النص لا يستعمل الخط  الكوفي</h1>
+    <h1 class="font-test">هذا النص  يستعمل الخط  الكوفي</h1> -->
+
+<!-- 
+    <table>
+        <tr>
+            <th rowspan="2">م</th>
+            <th>الإسم</th>
+            <th>تاريخ الميلاد</th>
+            <th colspan="2">عمليات</th>            
+        </tr>
+        <tr>            
+            <td>كريم</td>
+            <td>1/12/1990</td>
+            <td><a href="#" >حذف</a></td>
+            <td><a href="#" >تعديل</a></td>
+        </tr>
+    </table> -->
+    <input id="password" type="password"/>
+    <button onclick="CheckPassword()">Check Password</button>
+    <div id="js-test">
+        Java script test
+    </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
