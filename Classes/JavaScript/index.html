@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    Welcome to the JavaScript Class
+    <div id="message">
+
+    </div>
+    <div class="message">
+
+    </div>
+    <div class="message">
+
+    </div>
+    <div class="message">
+
+    </div>
+    <button onclick="document.write('Welcome')">Welcome</button>
+    <script type="text/javascript">
+        days = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+        for (var i = 0; i < 7; i++)
+            document.write('<h1>' + days[i] + '</h1>');
+    </script>
+
+
+    <input type="number" id="day" onchange="isValidDateAhmed()" />
+    <input type="number" id="month" onchange="isValidDateAhmed()" />
+    <input type="number" id="year" onchange="isValidDateAhmed()" />
+    <button onclick="isValidDateAhmed()">Validate</button>
+    <div class="message" id="result"></div>
+
+    <script type="text/javascript">
+        function isValidDateAhmed() {
+            var day = document.getElementById('day').value;
+            var month = document.getElementById('month').value;
+            var year = document.getElementById('year').value;
+            
+            document.getElementById('year').style.backgroundColor="white";
+            document.getElementById('month').style.backgroundColor="white";
+            document.getElementById('day').style.backgroundColor="white";
+            document.getElementById('result').style.display="none";
+            if (!isValidYear(year)) {
+                document.getElementById('result').innerHTML = "Invalid Year";
+                document.getElementById('year').style.backgroundColor="red";
+                document.getElementById('result').style.display="block";
+                return;
+            }
+            if (!isValidMonth(month)) {
+                document.getElementById('result').innerHTML = "Invalid Month";
+                document.getElementById('month').style.backgroundColor="red";
+                document.getElementById('result').style.display="block";
+                return;
+            }
+            if (!isValidDay(day, month, year)) {
+                document.getElementById('result').innerHTML = "Invalid Day";
+                document.getElementById('day').style.backgroundColor="red";
+                document.getElementById('result').style.display="block";
+                return;
+            }
+            document.getElementById('result').innerHTML = "Good Date";
+        }
+
+        function isValidYear(val) {
+            var date = new Date();
+            if (val > 0 && val <= date.getFullYear())
+                return true;
+            else
+                return false;
+        }
+
+        function isValidMonth(val) {
+            return (val > 0 && val <= 12);                
+        }
+
+        function isValidDay(day, month, year) {
+            if(day<1)
+                return false;
+            if(month==1 || month==3 || month==5 || month==7 || month==8 || month==10 || month==12){
+                if(day<=31)
+                    return true;
+            }
+            else if(month==4 || month==6 || month==9 || month==11){
+                if(day<=30)
+                    return true;
+            }
+            else if(month==2){
+                if(year%4==0 && day<=29)
+                    return true;
+                else if(day<=28)
+                    return true;
+            }
+            return false;
+        }
+
+
+        function isValidDate() {
+            var day = document.getElementById('day').value;
+            var month = document.getElementById('month').value;
+            var year = document.getElementById('year').value;
+            if (year <= 0 || year > 2019) {
+                document.getElementById('result').innerHTML = "Invalid Year";
+            }
+            else {
+                if (month < 1 || month > 12) {
+                    document.getElementById('result').innerHTML = "Invalid Month";
+                }
+                else {
+                    if (day < 1 ||
+                        (
+                            (month == 1 && day > 31) ||
+                            (month == 3 && day > 31) ||
+                            (month == 5 && day > 31) ||
+                            (month == 7 && day > 31) ||
+                            (month == 8 && day > 31) ||
+                            (month == 10 && day > 31) ||
+                            (month == 12 && day > 31) ||
+                            (month == 4 && day > 30) ||
+                            (month == 6 && day > 30) ||
+                            (month == 9 && day > 30) ||
+                            (month == 11 && day > 30) ||
+                            (
+                                month == 2 && (
+                                    (year % 4 == 0 && day > 29) ||
+                                    (year % 4 != 0 && day > 28)
+                                )
+                            )
+                        )
+                    ) {
+                        document.getElementById('result').innerHTML = "Invalid day";
+                    }
+                    else {
+                        document.getElementById('result').innerHTML = "Good  Date";
+                    }
+                }
+            }
+        }
+
+
+
+        function isValidDateLotfy() {
+            var day = document.getElementById('day').value;
+            var month = document.getElementById('month').value;
+            var year = document.getElementById('year').value;
+            var months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            if (year <= 0 || year > 2019) {
+                document.getElementById('result').innerHTML = "Invalid Year";
+            }
+            else {
+                if (month < 1 || month > 12) {
+                    document.getElementById('result').innerHTML = "Invalid Month";
+                }
+                else {
+                    if (day < 1 || (day > months[month - 1] && (year % 4 != 0 && month == 2))
+                        || (day > 29 && year % 4 == 0 && month == 2)
+                    ) {
+                        document.getElementById('result').innerHTML = "Invalid day";
+                    }
+                    else {
+                        document.getElementById('result').innerHTML = "Good  Date";
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        function printGrades(grades) {
+            var excellent = 0;
+            var vGood = 0;
+            var good = 0;
+            var accepted = 0;
+            var fail = 0;
+            for (var i = 0; i < grades.length; i++) {
+                if (grades[i] >= 85)
+                    excellent++;
+                else if (grades[i] >= 75)
+                    vGood++;
+                else if (grades[i] >= 65)
+                    good++;
+                else if (grades[i] >= 50)
+                    accepted++;
+                else
+                    fail++;
+            }
+            document.write('<h2>Excellent=' + excellent + '</h2>');
+            document.write('<h2>Very Good=' + vGood + '</h2>');
+            document.write('<h2>Good=' + good + '</h2>');
+            document.write('<h2>Accepted=' + accepted + '</h2>');
+            document.write('<h2>Fail=' + fail + '</h2>');
+        }
+
+        document.write('<h2>Class 1 Grades</h2>');
+        var class1Grades = [98, 50, 20, 0, 66, 80, 70, 12, 15, 48, 88, 90, 99];
+        printGrades(class1Grades);
+
+        document.write('<h2>Class 2 Grades</h2>');
+        var class2Grades = [98, 50, 70, 20, 66, 80, 70, 62, 95, 68, 88, 93, 99];
+        printGrades(class2Grades);
+
+        document.write('<h2>Class 3 Grades</h2>');
+        var class3Grades = [62, 95, 68, 88, 93, 99];
+        printGrades(class3Grades);
+
+    </script>
+
+</body>
+
+</html>

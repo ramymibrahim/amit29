@@ -1,0 +1,10 @@
+#message{
+    min-height: 100px;
+    background: red;
+    margin: 10px;
+}
+.message{
+    min-height: 100px;
+    background: gray;
+    margin: 10px;
+}
