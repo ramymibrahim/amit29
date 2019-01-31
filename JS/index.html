@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <form onsubmit="return validate();">
+        <input type="text" name="name" id="name" placeholder="Name" required onkeyup="validate_name()" />
+        <div id="val_name" class="validation"></div>
+        <input type="email" name="email" id="email" placeholder="Email" required onkeyup="validate_email()" />
+        <div id="val_email" class="validation"></div>
+        <input type="text" name="tel" id="tel" placeholder="Telephone" onkeyup="validate_tel()" />
+        <div id="val_tel" class="validation"></div>
+        <input type="date" name="birth-date" id="birth-date"  onchange="validate_birthdate()"/>
+        <div id="val_date" class="validation"></div>
+        <input type="file" name="file" id="file"  onchange="validate_file()"/>
+        <div id="val_file" class="validation"></div>
+        <span id="check-rnd"></span><input type="text" name="check" id="check"  onchange="validate_check()"/>
+        <div id="val_check" class="validation"></div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
